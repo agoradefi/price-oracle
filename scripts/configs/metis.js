@@ -65,6 +65,11 @@ module.exports = {
       underlying: "0x0ed0ca6872073e02cd3ae005baf04ba43be947fa",
       priceSource: "1",
     },
+    // BNB
+    {
+      underlying: "0x2692BE44A6E38B698731fDDf417d060f0d20A0cB",
+      priceSource: "1",
+    },
     // Netswap USDT-USDC LP
     {
       underlying: "0x1caD5f8f5D4C0AD49646B2565CC0cA725E4280EA",
@@ -122,6 +127,12 @@ module.exports = {
     // Netswap NETT-USDC LP
     {
       underlying: "0x0724d37522585E87d27C802728E824862Dc72861",
+      priceSource: "5",
+      uniLpCalcParams: UniLpCalcParams.Netswap,
+    },
+    // Netswap BNB-NETT LP
+    {
+      underlying: "0x3bF77b9192579826f260Bc48F2214Dfba840fcE5",
       priceSource: "5",
       uniLpCalcParams: UniLpCalcParams.Netswap,
     },
@@ -184,6 +195,12 @@ module.exports = {
       underlying: "0x41385Fe12F33cd19DdA784e073ae459050717EEB",
       priceSource: "4",
       repointedAsset: "0x3D60aFEcf67e6ba950b499137A72478B2CA7c5A1",
+    },
+    // Puff BNB-NETT
+    {
+      underlying: "0x51E741579c6ac32AAfd9B555Ed08a82106555Cbe",
+      priceSource: "4",
+      repointedAsset: "0x3bF77b9192579826f260Bc48F2214Dfba840fcE5",
     },
   ],
 
