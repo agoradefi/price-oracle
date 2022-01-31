@@ -44,7 +44,7 @@ async function main() {
   console.log("Deployed configs ==========================>");
   console.log(allConfigs);
 
-  const cTokensArr = await getMappedCTokensArr(oracle);
+  const cTokensArr = await getMappedCTokensArr(OracleI);
   console.log("\nCTokens whose underlyings are set on oracle ==========================>");
   console.log(cTokensArr);
   console.log(`Number of CTokens mapped: ${cTokensArr.length}`);
@@ -93,43 +93,15 @@ const getCTokenPricesOnOracle = async (OracleI, cTokensArr, allConfigs, basePric
   return priceData;
 }
 
-const getMappedCTokensArr = async (oracleAddr) => {
-  const endpoint = "https://graphql.bitquery.io/"
-  const headers = {
-    "Content-Type": "application/json",
-    "X-API-KEY": process.env.bitqueryKey,
-  }
-  const query = `{
-    ethereum(network: ${hre.network.name}) {
-      smartContractEvents(
-        smartContractAddress: {is: "${oracleAddr}"}
-        smartContractEvent: {is: "CTokenUnderlyingUpdated(address,address)"}
-        options: {asc: "block.height"}
-      ) {
-        arguments {
-          argument
-          value
-        }
-        block {
-          height
-        }
-        eventIndex
-      }
-    }
-  }`;
+const getMappedCTokensArr = async (OracleI) => {
+  const filter = OracleI.filters.CTokenUnderlyingUpdated();
+  const result = await OracleI.queryFilter(filter, 0, "latest");
 
-  const response = await axios.post(endpoint, JSON.stringify({ query }), {
-    headers: headers
+  const cTokens = [];
+  result.forEach(log => {
+    cTokens.push(log.args.cToken);
   });
-  // return empty array if we can't find data 
-  if (response.data.errors && response.data.errors.length > 0) return [];
-
-  const eventData = response.data.data.ethereum.smartContractEvents;
-  const sorted = eventData.sort((a, b) => {
-    if (a.block.height !== b.block.height) return 0
-    else return a.eventIndex - b.eventIndex
-  });
-  return sorted.map(a => a.arguments[0].value)
+  return cTokens;
 }
 
 main()
