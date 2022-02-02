@@ -202,6 +202,13 @@ module.exports = {
       priceSource: "4",
       repointedAsset: "0x3bF77b9192579826f260Bc48F2214Dfba840fcE5",
     },
+    // Puff WETH-Metis v2
+    {
+      underlying: "0x34F88c1137E6986c7eb864054688311960C2b12b",
+      priceSource: "4",
+      repointedAsset: "0x59051B5F5172b69E66869048Dc69D35dB0B3610d",
+      symbol: "puffNetswapWETH-METIS-v2",
+    },
   ],
 
   cTokenConfigs: {
@@ -226,7 +233,8 @@ module.exports = {
       "0x535119257F0126291AbC52Fc3C43E3FaE965e655",   // appuffNetswapWETH-M.USDT
       "0x60fBF2e945B73591f18B44d3E84c12Ee517c6c2C",   // appuffNetswapWETH-M.USDC
       "0xbC4f3a42094Bf8088C9F6749Cc1fBf919F425dd5",   // appuffNetswapWETH-METIS
-      "0x5891D61795F3037054ABe464d681b83b5355A707"    // appuffNetswapMETIS-M.USDT
+      "0x5891D61795F3037054ABe464d681b83b5355A707",   // appuffNetswapMETIS-M.USDT
+      "0x131728D0a0cd3788FCBe802Ad1259Ea55948d204",   // appuffNetswapWETH-METIS
     ],
   }
 };
