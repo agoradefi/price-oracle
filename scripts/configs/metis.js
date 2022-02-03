@@ -235,6 +235,7 @@ module.exports = {
       "0xbC4f3a42094Bf8088C9F6749Cc1fBf919F425dd5",   // appuffNetswapWETH-METIS
       "0x5891D61795F3037054ABe464d681b83b5355A707",   // appuffNetswapMETIS-M.USDT
       "0x131728D0a0cd3788FCBe802Ad1259Ea55948d204",   // appuffNetswapWETH-METIS
+      "0xE86776d75Ae807F5dD062C366e52a2758AD176ad",   // appuffNetswapm.USDT-M.USDC
     ],
   }
 };
