@@ -22,8 +22,8 @@ async function main() {
 
 const isValidBaseConfig = async () => {
   if (configs.tokenConfigs[0].underlying.toLowerCase() !== configs.baseAssetAddr.toLowerCase()) throw Error("Base config incorrect underlying");
-  if (!configs.tokenConfigs[0].uniswapMarket) throw Error("Base config needs uniswap market");
-  if (configs.tokenConfigs[0].priceSource !== "1") throw Error("Base config incorrect priceSource");
+  // if (!configs.tokenConfigs[0].uniswapMarket) throw Error("Base config needs uniswap market");
+  // if (configs.tokenConfigs[0].priceSource !== "1") throw Error("Base config incorrect priceSource");
 
   console.log("Verified Base Config");
 };
@@ -182,7 +182,7 @@ const setConfigsOnOracle = async (_detailedConfigs) => {
     try {
       await OracleI.getTokenConfigByUnderlying(tokenConfig.underlying);
     } catch (e) {
-      if (e.reason.includes("token config not found") || e.error.message.includes("token config not found")) {
+      if (e.reason?.includes("token config not found") || e.error.message.includes("token config not found")) {
         toBeAddedConfigs.push(tokenConfig);
       } else {
         throw Error(e);

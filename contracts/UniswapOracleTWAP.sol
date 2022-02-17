@@ -266,9 +266,14 @@ contract UniswapOracleTWAP is UniswapLpPrice, UniswapConfig, PosterAccessControl
      * @notice Update ETH price, and recalculate stored price by comparing to anchor
      */
     function updateEthPrice() public {
-        uint ethPrice = fetchEthPrice();
-        // Try to update the storage
-        updatePriceInternal(ETH, ethPrice);
+        TokenConfig memory config = getTokenConfigBySymbol(ETH);
+        if (config.priceSource == PriceSource.UNISWAP) {
+            uint ethPrice = fetchEthPrice();
+            updatePriceInternal(ETH, ethPrice);
+        }
+        if (config.priceSource == PriceSource.EXTERNAL_ORACLE) {
+            prices[ethHash] = priceInternal(config);
+        }
     }
 
     function updatePriceInternal(string memory symbol, uint ethPrice) internal {

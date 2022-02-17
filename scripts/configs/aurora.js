@@ -26,11 +26,11 @@ module.exports = {
   UniswapV2Router: "0x2CB45Edb4517d5947aFdE3BEAbF95A582506858B",
   basePriceDecimals: "18",
   tokenConfigs: [
-    // base config - NEAR/USDC
+    // base config - NEAR
     {
       underlying: "0xC42C30aC6Cc15faC9bD938618BcaA1a1FaE8501d",
-      priceSource: "1",
-      uniswapMarket: "0xa9eded3E339b9cd92bB6DEF5c5379d678131fF90",
+      priceSource: "3",
+      externalOracle: "0x79c57C246794606c83AB32dc56e5cD2030FB552b",
     },
     // USDO
     {
@@ -41,24 +41,26 @@ module.exports = {
     // USDC
     {
       underlying: "0xB12BFcA5A55806AaF64E99521918A4bf0fC40802",
-      priceSource: "0",
-      fixedPrice: "1",
+      priceSource: "3",
+      externalOracle: "0xdD170e697d7ADed472a9284f07576c3449284502",
     },
     // USDT
     {
       underlying: "0x4988a896b1227218e4A686fdE5EabdcAbd91571f",
-      priceSource: "0",
-      fixedPrice: "1",
+      priceSource: "3",
+      externalOracle: "0x55b9eD56737B161677dC5146873E643647Ba5a43",
     },
     // WETH
     {
       underlying: "0xC9BdeEd33CD01541e1eeD10f90519d2C06Fe3feB",
-      priceSource: "1",
+      priceSource: "3",
+      externalOracle: "0x842AF8074Fa41583E3720821cF1435049cf93565",
     },
     // WBTC
     {
       underlying: "0xF4eB217Ba2454613b15dBdea6e5f22276410e89e",
-      priceSource: "1",
+      priceSource: "3",
+      externalOracle: "0xBE46e430d336fC827d096Db044cBaEECE72e17bC",
     },
     // Trisolaris
     {
