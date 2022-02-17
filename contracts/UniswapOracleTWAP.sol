@@ -21,7 +21,7 @@ contract UniswapOracleTWAP is UniswapLpPrice, UniswapConfig, PosterAccessControl
     using FixedPoint for *;
 
     /// @notice The number of wei in 1 ETH
-    uint public constant ethBaseUnit = 1e18;
+    uint public constant ethBaseUnit = 1e24;
 
     /// @notice A common scaling factor to maintain precision
     uint public constant expScale = 1e18;

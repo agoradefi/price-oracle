@@ -1,0 +1,8 @@
+{
+  "ProxyOracle": "0x8E19a56A8b2bD64dcd815d2A16661a360D236487",
+  "UniswapOracleTWAP": [
+    {
+      "address": "0x50d2A7c108Cc045F45cCA9A1047ed63b42E0E1FE"
+    }
+  ]
+}

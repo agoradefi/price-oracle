@@ -21,21 +21,7 @@ async function main() {
 };
 
 const isValidBaseConfig = async () => {
-  const RouterI = new hre.ethers.Contract(configs.UniswapV2Router, RouterAbi, hre.ethers.provider.getSigner());
-  let weth;
-  try {
-    weth = await RouterI.WETH();
-  } catch (e) {
-    const tempAbi = [`function ${configs.baseAsset}() view returns (address)`];
-    const TempRouterI = new hre.ethers.Contract(configs.UniswapV2Router, tempAbi, hre.ethers.provider.getSigner());
-    weth = await TempRouterI[`${configs.baseAsset}()`]();
-  }
-  if (configs.tokenConfigs[0].underlying.toLowerCase() !== weth.toLowerCase()) throw Error("Base config incorrect underlying");
-  if (configs.tokenConfigs[0].symbol) {
-    const WethI = new hre.ethers.Contract(weth, Erc20Abi, hre.ethers.provider.getSigner());
-    const wethSymbol = await WethI.symbol();
-    if (configs.tokenConfigs[0].symbol !== wethSymbol) throw Error("Base config incorrect symbol");
-  }
+  if (configs.tokenConfigs[0].underlying.toLowerCase() !== configs.baseAssetAddr.toLowerCase()) throw Error("Base config incorrect underlying");
   if (!configs.tokenConfigs[0].uniswapMarket) throw Error("Base config needs uniswap market");
   if (configs.tokenConfigs[0].priceSource !== "1") throw Error("Base config incorrect priceSource");
 
@@ -113,21 +99,12 @@ const createConfig = async (config, configIndex) => {
     // UNISWAP
     case '1': {
       const RouterI = new hre.ethers.Contract(configs.UniswapV2Router, RouterAbi, hre.ethers.provider.getSigner());
-      let weth;
-      try {
-        weth = await RouterI.WETH();
-      } catch (e) {
-        const tempAbi = [`function ${configs.baseAsset}() view returns (address)`];
-        const TempRouterI = new hre.ethers.Contract(configs.UniswapV2Router, tempAbi, hre.ethers.provider.getSigner());
-        weth = await TempRouterI[`${configs.baseAsset}()`]();
-      }
-
       if (config.uniswapMarket) {
         tokenConfig.uniswapMarket = config.uniswapMarket;
       } else {
         const factory = await RouterI.factory();
         const FactoryI = new hre.ethers.Contract(factory, FactoryAbi, hre.ethers.provider.getSigner());
-        const pair = await FactoryI.getPair(weth, config.underlying);
+        const pair = await FactoryI.getPair(configs.baseAssetAddr, config.underlying);
         if (pair === hre.ethers.constants.AddressZero) throw Error(`pair not found for ${tokenConfig.underlying} - ${tokenConfig.symbol}`);
         tokenConfig.uniswapMarket = pair;
       }
@@ -138,7 +115,7 @@ const createConfig = async (config, configIndex) => {
       // isUniswapReversed is true when token1 === underlying
       tokenConfig.isUniswapReversed = token1.toLowerCase() === tokenConfig.underlying.toLowerCase();
 
-      if (weth.toLowerCase() !== token0.toLowerCase() && weth.toLowerCase() !== token1.toLowerCase()) {
+      if (configs.baseAssetAddr.toLowerCase() !== token0.toLowerCase() && configs.baseAssetAddr.toLowerCase() !== token1.toLowerCase()) {
         tokenConfig.isPairWithStablecoin = true;
       }
       break;
@@ -205,7 +182,7 @@ const setConfigsOnOracle = async (_detailedConfigs) => {
     try {
       await OracleI.getTokenConfigByUnderlying(tokenConfig.underlying);
     } catch (e) {
-      if (e.error.message.includes("token config not found")) {
+      if (e.reason.includes("token config not found") || e.error.message.includes("token config not found")) {
         toBeAddedConfigs.push(tokenConfig);
       } else {
         throw Error(e);

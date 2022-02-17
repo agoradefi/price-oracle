@@ -19,6 +19,10 @@ module.exports = {
       url: process.env.metisRpc || "https://andromeda.metis.io/?owner=1088",
       accounts: [privateKey],
     },
+    aurora: {
+      url: process.env.auroraRpc || "https://mainnet.aurora.dev/",
+      accounts: [privateKey],
+    },
   },
   solidity: {
     version: "0.6.12",
