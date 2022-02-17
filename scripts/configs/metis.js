@@ -70,6 +70,12 @@ module.exports = {
       underlying: "0x2692BE44A6E38B698731fDDf417d060f0d20A0cB",
       priceSource: "1",
     },
+    // TETHYS
+    {
+      underlying: "0x69fdb77064ec5c84FA2F21072973eB28441F43F3",
+      priceSource: "1",
+      uniswapMarket: "0xc9b290FF37fA53272e9D71A0B13a444010aF4497",
+    },
     // Netswap USDT-USDC LP
     {
       underlying: "0x1caD5f8f5D4C0AD49646B2565CC0cA725E4280EA",
@@ -220,6 +226,7 @@ module.exports = {
       "0x2E9347dda00B3ec1b188963b590ca1eCBD73145A",   // kWETH
       "0x5f87B34BFa147Ac23F25786Bba6C1b1b06B45dC8",   // kNETT
       "0x7614124928A2103901F18ED49667D824fcBf6ea1",   // kAGORA
+      "0x67A1E7CE249262d35A4de4A22e850f59AeEF23BE",   // kTETHYS
       "0x7754404DdB9F5B318bE165426eBa36d0c69D86B2",   // apUSDO
       "0xE85A1ae1A2A21135c49ADEd398D3FD5Ed032B28e",   // apMetis
       "0x883469F88b94adE82343490d9e68C58DaFfe0B33",   // apm.USDC
