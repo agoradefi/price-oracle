@@ -64,11 +64,7 @@ module.exports = {
     {
       underlying: "0x0ed0ca6872073e02cd3ae005baf04ba43be947fa",
       priceSource: "1",
-    },
-    // BNB
-    {
-      underlying: "0x2692BE44A6E38B698731fDDf417d060f0d20A0cB",
-      priceSource: "1",
+      uniswapMarket: "0x4d0e3Dfd6640F8f50b9d72058915a7903c420CD0",
     },
     // TETHYS
     {
@@ -82,144 +78,59 @@ module.exports = {
       priceSource: "1",
       uniswapMarket: "0xA0081C6D591c53Ae651bD71B8d90C83C1F1106C2",
     },
-    // Netswap USDT-USDC LP
+    // AgoraSwap WBTC-m.USDT LP
     {
-      underlying: "0x1caD5f8f5D4C0AD49646B2565CC0cA725E4280EA",
+      underlying: "0x148a0a6d6dc539ee24bea0c1ef45c4c60414711d",
       priceSource: "5",
-      uniLpCalcParams: UniLpCalcParams.Netswap,
+      uniLpCalcParams: UniLpCalcParams.AgoraSwap,
     },
-    // Netswap WETH-USDT LP
+    // AgoraSwap WETH-Metis LP
     {
-      underlying: "0x4Db4CE7f5b43A6B455D3c3057b63A083b09b8376",
+      underlying: "0x3d7f3003d7263678703d7f161e32f4d8560d4339",
       priceSource: "5",
-      uniLpCalcParams: UniLpCalcParams.Netswap,
+      uniLpCalcParams: UniLpCalcParams.AgoraSwap,
     },
-    // Netswap WETH-USDC LP
+    // AgoraSwap AGORA-USDC LP
     {
-      underlying: "0xF5988809ac97C65121e2c34f5D49558e3D12C253",
+      underlying: "0x3e49912983374d1ce0c329ca71e92c8b904b783a",
       priceSource: "5",
-      uniLpCalcParams: UniLpCalcParams.Netswap,
+      uniLpCalcParams: UniLpCalcParams.AgoraSwap,
     },
-    // Netswap WETH-Metis LP
+    // AgoraSwap WETH-m.USDC LP
     {
-      underlying: "0x59051B5F5172b69E66869048Dc69D35dB0B3610d",
+      underlying: "0x4a726ce08321288070605d18be429e8b13e70e19",
       priceSource: "5",
-      uniLpCalcParams: UniLpCalcParams.Netswap,
+      uniLpCalcParams: UniLpCalcParams.AgoraSwap,
     },
-    // Netswap NETT-Metis LP
+    // AgoraSwap AGORA-Metis LP
     {
-      underlying: "0x60312d4EbBF3617d3D33841906b5868A86931Cbd",
+      underlying: "0x4d0e3dfd6640f8f50b9d72058915a7903c420cd0",
       priceSource: "5",
-      uniLpCalcParams: UniLpCalcParams.Netswap,
+      uniLpCalcParams: UniLpCalcParams.AgoraSwap,
     },
-    // Netswap USDT-Metis LP
+    // AgoraSwap WBTC-Metis LP
     {
-      underlying: "0x3D60aFEcf67e6ba950b499137A72478B2CA7c5A1",
+      underlying: "0x53daf5f54f09f6471a5ff594f2094a2e73804a23",
       priceSource: "5",
-      uniLpCalcParams: UniLpCalcParams.Netswap,
+      uniLpCalcParams: UniLpCalcParams.AgoraSwap,
     },
-    // Netswap Metis-USDC LP
+    // AgoraSwap WETH-USDT LP
     {
-      underlying: "0x5Ae3ee7fBB3Cb28C17e7ADc3a6Ae605ae2465091",
+      underlying: "0x7c4bcb041d81f4db44bf3b2a2ce242c59aa3ab8a",
       priceSource: "5",
-      uniLpCalcParams: UniLpCalcParams.Netswap,
+      uniLpCalcParams: UniLpCalcParams.AgoraSwap,
     },
-    // Netswap WETH-NETT LP
+    // AgoraSwap USDT-Metis LP
     {
-      underlying: "0xC8aE82A0ab6AdA2062B812827E1556c0fa448dd0",
+      underlying: "0xd227a53cc048286e96b47f30a013f559fc8661c3",
       priceSource: "5",
-      uniLpCalcParams: UniLpCalcParams.Netswap,
+      uniLpCalcParams: UniLpCalcParams.AgoraSwap,
     },
-    // Netswap NETT-USDT LP
+    // AgoraSwap Metis-USDC LP
     {
-      underlying: "0x7D02ab940d7dD2B771e59633bBC1ed6EC2b99Af1",
+      underlying: "0xd28b586d626eba54914b7c7ccdf582711ba42588",
       priceSource: "5",
-      uniLpCalcParams: UniLpCalcParams.Netswap,
-    },
-    // Netswap NETT-USDC LP
-    {
-      underlying: "0x0724d37522585E87d27C802728E824862Dc72861",
-      priceSource: "5",
-      uniLpCalcParams: UniLpCalcParams.Netswap,
-    },
-    // Netswap BNB-NETT LP
-    {
-      underlying: "0x3bF77b9192579826f260Bc48F2214Dfba840fcE5",
-      priceSource: "5",
-      uniLpCalcParams: UniLpCalcParams.Netswap,
-    },
-    // Puff NETT-USDC
-    {
-      underlying: "0xaF8993DFdbe39A9c606D75aBA1e542D7E3090956",
-      priceSource: "4",
-      repointedAsset: "0x0724d37522585E87d27C802728E824862Dc72861",
-    },
-    // Puff Metis-USDC
-    {
-      underlying: "0x6c7eb3942BaF403090B89bC5032698Db5f45d273",
-      priceSource: "4",
-      repointedAsset: "0x5Ae3ee7fBB3Cb28C17e7ADc3a6Ae605ae2465091",
-    },
-    // Puff WETH-NETT
-    {
-      underlying: "0xeF0600F55b48983295445F230E00A8C014cF1a2E",
-      priceSource: "4",
-      repointedAsset: "0xC8aE82A0ab6AdA2062B812827E1556c0fa448dd0",
-    },
-    // Puff NETT-Metis
-    {
-      underlying: "0x6394B9246001460d8D78d435A6F30BA69BE41894",
-      priceSource: "4",
-      repointedAsset: "0x60312d4EbBF3617d3D33841906b5868A86931Cbd",
-    },
-    // Puff NETT-USDT
-    {
-      underlying: "0xeA0527234A7ACDfcB63b0B974CD416B18dc0cC33",
-      priceSource: "4",
-      repointedAsset: "0x7D02ab940d7dD2B771e59633bBC1ed6EC2b99Af1",
-    },
-    // Puff USDT-USDC
-    {
-      underlying: "0xE0F94fEE7a5318E10Fd0FCf23A4735208f1a7E41",
-      priceSource: "4",
-      repointedAsset: "0x1caD5f8f5D4C0AD49646B2565CC0cA725E4280EA",
-    },
-    // Puff WETH-USDT
-    {
-      underlying: "0x118F9bBC098647b1b73e6B1981A07f943151245D",
-      priceSource: "4",
-      repointedAsset: "0x4Db4CE7f5b43A6B455D3c3057b63A083b09b8376",
-    },
-    // Puff WETH-USDC
-    {
-      underlying: "0xf7283835b9F4dcB24dFB0d8ceC8651619Ccb376a",
-      priceSource: "4",
-      repointedAsset: "0xF5988809ac97C65121e2c34f5D49558e3D12C253",
-    },
-    // Puff WETH-Metis
-    {
-      underlying: "0xdfC367a1f270E7c2AE6129B1De3D146B69cbcc15",
-      priceSource: "4",
-      repointedAsset: "0x59051B5F5172b69E66869048Dc69D35dB0B3610d",
-    },
-    // Puff USDT-Metis
-    {
-      underlying: "0x41385Fe12F33cd19DdA784e073ae459050717EEB",
-      priceSource: "4",
-      repointedAsset: "0x3D60aFEcf67e6ba950b499137A72478B2CA7c5A1",
-    },
-    // Puff BNB-NETT
-    {
-      underlying: "0x51E741579c6ac32AAfd9B555Ed08a82106555Cbe",
-      priceSource: "4",
-      repointedAsset: "0x3bF77b9192579826f260Bc48F2214Dfba840fcE5",
-    },
-    // Puff WETH-Metis v2
-    {
-      underlying: "0x34F88c1137E6986c7eb864054688311960C2b12b",
-      priceSource: "4",
-      repointedAsset: "0x59051B5F5172b69E66869048Dc69D35dB0B3610d",
-      symbol: "puffNetswapWETH-METIS-v2",
+      uniLpCalcParams: UniLpCalcParams.AgoraSwap,
     },
   ],
 
@@ -234,23 +145,6 @@ module.exports = {
       "0x7614124928A2103901F18ED49667D824fcBf6ea1",   // kAGORA
       "0x67A1E7CE249262d35A4de4A22e850f59AeEF23BE",   // kTETHYS
       "0x94E56c0C59433599ba857a9a7243b2826745CF91",   // kWBTC
-      "0x7754404DdB9F5B318bE165426eBa36d0c69D86B2",   // apUSDO
-      "0xE85A1ae1A2A21135c49ADEd398D3FD5Ed032B28e",   // apMetis
-      "0x883469F88b94adE82343490d9e68C58DaFfe0B33",   // apm.USDC
-      "0x89d7926c60D508863a144662a0B7ff1D4B30Fbaf",   // apm.USDT
-      "0xf8118241eb25A09B314c17E2A6923cCC72543A47",   // appuffNetswapNETT-M.USDC
-      "0x3b885BD5CD9DeED0d91770773627bB22E54f0Ff0",   // appuffNetswapNETT-BNB
-      "0x4f663934f268975Fddc857E96B913F964Bfad25D",   // appuffNetswapMETIS-M.USDC
-      "0x4121D9F86b9eD8F1E5Adbe3E85FBA335fcAb2948",   // appuffNetswapNETT-WETH
-      "0x415332a107005E93c8aA5f00A34df8529e3e2b7b",   // appuffNetswapNETT-METIS
-      "0x13f6501994A51D77B160cb9333E3D2A460cF8e8B",   // appuffNetswapNETT-M.USDT
-      "0x310eE8262cdE9C297B25BDF42d234b38495bdDcE",   // appuffNetswapm.USDT-M.USDC
-      "0x535119257F0126291AbC52Fc3C43E3FaE965e655",   // appuffNetswapWETH-M.USDT
-      "0x60fBF2e945B73591f18B44d3E84c12Ee517c6c2C",   // appuffNetswapWETH-M.USDC
-      "0xbC4f3a42094Bf8088C9F6749Cc1fBf919F425dd5",   // appuffNetswapWETH-METIS
-      "0x5891D61795F3037054ABe464d681b83b5355A707",   // appuffNetswapMETIS-M.USDT
-      "0x131728D0a0cd3788FCBe802Ad1259Ea55948d204",   // appuffNetswapWETH-METIS
-      "0xE86776d75Ae807F5dD062C366e52a2758AD176ad",   // appuffNetswapm.USDT-M.USDC
     ],
   }
 };
