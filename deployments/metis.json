@@ -3,6 +3,9 @@
   "UniswapOracleTWAP": [
     {
       "address": "0xA2cA7055655E35B7D2291C5a75fC665e88cE27f8"
+    },
+    {
+      "address": "0x1B6684484444EC585b6Fbdbc18CFeBAEE006C566"
     }
   ]
 }

@@ -12,6 +12,10 @@ const UniLpCalcParams = {
     numFactor: "1",
     denoFactor: "5",
   },
+  AgoraSwap: {
+    numFactor: "1",
+    denoFactor: "5",
+  },
 }
 
 exports.UniLpCalcParams = UniLpCalcParams;
