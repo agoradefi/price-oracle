@@ -31,13 +31,7 @@ module.exports = {
     {
       underlying: "0xDeadDeAddeAddEAddeadDEaDDEAdDeaDDeAD0000",
       priceSource: "1",
-      uniswapMarket: "0x5Ae3ee7fBB3Cb28C17e7ADc3a6Ae605ae2465091",
-    },
-    // USDO
-    {
-      underlying: "0x5801D0e1C7D977D78E4890880B8E579eb4943276",
-      priceSource: "0",
-      fixedPrice: "1",
+      uniswapMarket: "0xDd7dF3522a49e6e1127bf1A1d3bAEa3bc100583B",
     },
     // USDC
     {
@@ -45,106 +39,39 @@ module.exports = {
       priceSource: "0",
       fixedPrice: "1",
     },
-    // USDT
-    {
-      underlying: "0xbB06DCA3AE6887fAbF931640f67cab3e3a16F4dC",
-      priceSource: "1",
-    },
-    // ETH
-    {
-      underlying: "0x420000000000000000000000000000000000000a",
-      priceSource: "1",
-    },
-    // NETT
-    {
-      underlying: "0x90fE084F877C65e1b577c7b2eA64B8D8dd1AB278",
-      priceSource: "1",
-    },
     // AGORA
     {
       underlying: "0x0ed0ca6872073e02cd3ae005baf04ba43be947fa",
       priceSource: "1",
-      uniswapMarket: "0x4d0e3Dfd6640F8f50b9d72058915a7903c420CD0",
-    },
-    // TETHYS
-    {
-      underlying: "0x69fdb77064ec5c84FA2F21072973eB28441F43F3",
-      priceSource: "1",
-      uniswapMarket: "0xc9b290FF37fA53272e9D71A0B13a444010aF4497",
-    },
-    // WBTC
-    {
-      underlying: "0xa5B55ab1dAF0F8e1EFc0eB1931a957fd89B918f4",
-      priceSource: "1",
-      uniswapMarket: "0xA0081C6D591c53Ae651bD71B8d90C83C1F1106C2",
+      uniswapMarket: "0xc6Eac7FF407EdB9D27463dc1f14FDdcfdF1f887d",
     },
     // AgoraSwap WBTC-m.USDT LP
     {
       underlying: "0x148a0a6d6dc539ee24bea0c1ef45c4c60414711d",
-      priceSource: "5",
-      uniLpCalcParams: UniLpCalcParams.AgoraSwap,
-    },
-    // AgoraSwap WETH-Metis LP
-    {
-      underlying: "0x3d7f3003d7263678703d7f161e32f4d8560d4339",
-      priceSource: "5",
-      uniLpCalcParams: UniLpCalcParams.AgoraSwap,
-    },
-    // AgoraSwap AGORA-USDC LP
-    {
-      underlying: "0x3e49912983374d1ce0c329ca71e92c8b904b783a",
-      priceSource: "5",
-      uniLpCalcParams: UniLpCalcParams.AgoraSwap,
-    },
-    // AgoraSwap WETH-m.USDC LP
-    {
-      underlying: "0x4a726ce08321288070605d18be429e8b13e70e19",
-      priceSource: "5",
-      uniLpCalcParams: UniLpCalcParams.AgoraSwap,
+      priceSource: "0",
+      fixedPrice: "1",
     },
     // AgoraSwap AGORA-Metis LP
     {
-      underlying: "0x4d0e3dfd6640f8f50b9d72058915a7903c420cd0",
+      underlying: "0xc6Eac7FF407EdB9D27463dc1f14FDdcfdF1f887d",
       priceSource: "5",
       uniLpCalcParams: UniLpCalcParams.AgoraSwap,
     },
-    // AgoraSwap WBTC-Metis LP
+    // Tethys AGORA-USDC LP
     {
-      underlying: "0x53daf5f54f09f6471a5ff594f2094a2e73804a23",
+      underlying: "0x5D26F8bFe08b0d8ed74F74ebEb57D1A70bE57B1C",
       priceSource: "5",
-      uniLpCalcParams: UniLpCalcParams.AgoraSwap,
-    },
-    // AgoraSwap WETH-USDT LP
-    {
-      underlying: "0x7c4bcb041d81f4db44bf3b2a2ce242c59aa3ab8a",
-      priceSource: "5",
-      uniLpCalcParams: UniLpCalcParams.AgoraSwap,
-    },
-    // AgoraSwap USDT-Metis LP
-    {
-      underlying: "0xd227a53cc048286e96b47f30a013f559fc8661c3",
-      priceSource: "5",
-      uniLpCalcParams: UniLpCalcParams.AgoraSwap,
-    },
-    // AgoraSwap Metis-USDC LP
-    {
-      underlying: "0xd28b586d626eba54914b7c7ccdf582711ba42588",
-      priceSource: "5",
-      uniLpCalcParams: UniLpCalcParams.AgoraSwap,
+      uniLpCalcParams: UniLpCalcParams.Tethys,
     },
   ],
 
   cTokenConfigs: {
     cTokens: [
-      "0x7759eeb5365E94428BF46A26567c49c25ee5b319",   // kUSDO
-      "0xcFd482DcE13cA1d27834D381AF1b570E9E6C6810",   // kMetis
-      "0x6D11F074131E3FC61C983cCe538F5D0ca3553c0F",   // kUSDC
-      "0x4b45B1905Cd1dC18eDad134d2E43f5043e1E157c",   // kUSDC
-      "0x2E9347dda00B3ec1b188963b590ca1eCBD73145A",   // kWETH
-      "0x5f87B34BFa147Ac23F25786Bba6C1b1b06B45dC8",   // kNETT
-      "0x7614124928A2103901F18ED49667D824fcBf6ea1",   // kAGORA
-      "0x67A1E7CE249262d35A4de4A22e850f59AeEF23BE",   // kTETHYS
-      "0x94E56c0C59433599ba857a9a7243b2826745CF91",   // kWBTC
+      "0x41374d88c3b053ccde2a9aCeb2a7E499a127b565",
+      "0x13Cb104a1D94A89a260b27DfAAB07C862da622E5",
+      "0x5E03c65103f3cA2E9E43907Ef994b8F1110DE1d3",
+      "0x7B03C438048e000b2fE7d7e9bAE8a47FdbC6d864",
+      "0xF43ea72C651912BDC94C8e7D488cC12ce68c65f4"
     ],
   }
 };

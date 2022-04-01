@@ -16,6 +16,10 @@ const UniLpCalcParams = {
     numFactor: "1",
     denoFactor: "5",
   },
+  Tethys: {
+    numFactor: "1",
+    denoFactor: "3",
+  },
 }
 
 exports.UniLpCalcParams = UniLpCalcParams;
